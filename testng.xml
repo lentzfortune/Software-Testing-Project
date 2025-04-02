@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/jorda/OneDrive - Florida Gulf Coast University/Projects/intellij/WhatsApp-Testing">
+        <classes>
+            <class name = "StatusTest">
+                <methods>
+                    <include name="testStatus"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
