@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="C:/Users/jorda/OneDrive - Florida Gulf Coast University/Projects/intellij/WhatsApp-Testing(failed)">
+    <classes>
+      <class name="StatusTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="testStatus"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- StatusTest -->
+    </classes>
+  </test> <!-- C:/Users/jorda/OneDrive - Florida Gulf Coast University/Projects/intellij/WhatsApp-Testing(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->
