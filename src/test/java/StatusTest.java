@@ -92,25 +92,62 @@ public class StatusTest {
 
         // Find the input
         WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
-        Thread.sleep(4000);
+        Thread.sleep(2000);
 
         // Upload the photo
         fileInput.sendKeys("C:\\Users\\jorda\\OneDrive - Florida Gulf Coast University\\Projects\\intellij\\WhatsApp-Testing\\cat.jpg");
-        Thread.sleep(4000);
-
-        // Robot
-        Robot robot = new Robot();
         Thread.sleep(2000);
+
+        // Robot to close the file explorer because it hates me
+        Robot robot = new Robot();
         robot.keyPress(KeyEvent.VK_ESCAPE);
         robot.keyRelease(KeyEvent.VK_ESCAPE);
-        System.out.println("Closed file explorer with ESC!");
-        Thread.sleep(4000);
+        Thread.sleep(2000);
+
+        // Add filter
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[3]/div/div/div/div/div[1]/div[1]/div[2]/div[2]/button")).click();
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[3]/div/div/div/div/div[1]/div[2]/div/div/div[6]/div")).click();
+        Thread.sleep(2000);
+
+        // Send status
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[3]/div/div/div/div/div[2]/div[2]/div/div")).click();
+        Thread.sleep(2000);
+
+
+
+
+
+
+
 
         // View statuses
+        Status_Add_Check.click();
+        Thread.sleep(1000);
+
+        // Click views
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[3]/div/div/div/span/div/div/div/div[6]/div/button/div/div[2]")).click();
+        Thread.sleep(2000);
+
+        // Click out of views
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div/header/div/div[1]/div")).click();
+        Thread.sleep(2000);
 
         // Pause second status
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[3]/div/div/div/span/div/div/div/div[2]/div[3]/div/div/button/button/span")).click();
+        Thread.sleep(2000);
 
-        // Exit status early
+        // Download picture
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[3]/div/div/div/span/div/div/div/div[2]/div[3]/div/div/div[2]/span/div/button/span")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[5]/div/ul/div/li[1]/div")).click();
+        Thread.sleep(2000);
+
+        // Exit early
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[3]/div/div/div/button[1]/span")).click();
+        Thread.sleep(2000);
+
 
         // Delete Statuses
 
