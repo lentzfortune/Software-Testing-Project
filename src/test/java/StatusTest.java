@@ -35,6 +35,9 @@ public class StatusTest {
         WebElement chatList = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[3]/div/header/div/div/div/div/span/div/div[2]/div[2]/button")));
         Thread.sleep(2000);
 
+
+
+
         // Click status
         driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/header/div/div/div/div/span/div/div[1]/div[2]/button/span")).click();
         Thread.sleep(2000);
@@ -144,14 +147,181 @@ public class StatusTest {
         driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[5]/div/ul/div/li[1]/div")).click();
         Thread.sleep(2000);
 
+        // Dismiss download bar
+        robot.keyPress(KeyEvent.VK_ESCAPE);
+        robot.keyRelease(KeyEvent.VK_ESCAPE);
+        Thread.sleep(2000);
+
         // Exit early
         driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[3]/div/div/div/button[1]/span")).click();
         Thread.sleep(2000);
 
 
-        // Delete Statuses
+
+
+
+
+
+        // Delete text Status
+        Status_Add_Check.click();
+        Thread.sleep(1000);
+
+        // Delete status and confirm
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[3]/div/div/div/span/div/div/div/div[2]/div[3]/div/div/div[2]/span/div/button")).click();;
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[5]/div/ul/div/li")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div[2]/div/button[2]")).click();
+        Thread.sleep(2000);
+
+        // Delete image status
+        Status_Add_Check.click();
+        Thread.sleep(2000);
+
+        // Delete status and confirm
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[3]/div/div/div/span/div/div/div/div[2]/div[3]/div/div/div[2]/span/div/button")).click();;
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[5]/div/ul/div/li[2]")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div[2]/div/button[2]")).click();
+        Thread.sleep(2000);
+
+
+
+
+
+
+
+
 
         // Change status privacy
+        // Click 3 dots
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/span/div/div/header/div/span/div/div[2]/button")).click();
+        Thread.sleep(2000);
+
+        // Click status privacy
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[5]/div/ul/div/li")).click();
+        Thread.sleep(2000);
+
+        // Click my contacts except...
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/span/div/div/div/div[2]/button[2]")).click();
+        Thread.sleep(2000);
+
+        // Search
+        // Locate the input field
+        WebElement inputField = driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div/div[1]/div/div[2]/div/div/div"));
+
+        // Type in Lentz
+        Actions actions = new Actions(driver);
+        actions.moveToElement(inputField).click().sendKeys("Lentz Fortune").perform();
+        Thread.sleep(2000);
+
+        // Select name
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div/div[2]/div/div/div/div[2]/div/div[2]")).click();
+        Thread.sleep(2000);
+
+        // Clear search bar
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div/div[1]/div/div[2]/span/button")).click();
+        Thread.sleep(2000);
+
+        // Type in David
+        actions.moveToElement(inputField).click().sendKeys("Deividas Ilgunas").perform();
+        Thread.sleep(2000);
+
+        // Select name
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div/div[2]/div/div/div/div[2]/div/div[2]")).click();
+        Thread.sleep(2000);
+
+        // Clear search bar
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div/div[1]/div/div[2]/span/button")).click();
+        Thread.sleep(2000);
+
+        // Type in Daniel
+        actions.moveToElement(inputField).click().sendKeys("Daniel De Sousa").perform();
+        Thread.sleep(2000);
+
+        // Select name
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div/div[2]/div/div/div/div[2]/div/div[2]")).click();
+        Thread.sleep(2000);
+
+        // Clear search bar
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div/div[1]/div/div[2]/span/button")).click();
+        Thread.sleep(2000);
+
+        // click check mark
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div/span/div/div/div")).click();
+        Thread.sleep(2000);
+
+        // Click Only share with...
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/span/div/div/div/div[2]/button[3]")).click();
+        Thread.sleep(2000);
+
+        // Type in Lentz
+        inputField = driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div/div[1]/div/div[2]/div/div/div"));
+
+        actions.moveToElement(inputField).click().sendKeys("Lentz Fortune").perform();
+        Thread.sleep(2000);
+
+        // Select name
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div/div[2]/div/div/div/div[2]/div/div[2]")).click();
+        Thread.sleep(2000);
+
+        // Clear search bar
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div/div[1]/div/div[2]/span/button")).click();
+        Thread.sleep(2000);
+
+        // Type in David
+        actions.moveToElement(inputField).click().sendKeys("Deividas Ilgunas").perform();
+        Thread.sleep(2000);
+
+        // Select name
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div/div[2]/div/div/div/div[2]/div/div[2]")).click();
+        Thread.sleep(2000);
+
+        // Clear search bar
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div/div[1]/div/div[2]/span/button")).click();
+        Thread.sleep(2000);
+
+        // Type in Daniel
+        actions.moveToElement(inputField).click().sendKeys("Daniel De Sousa").perform();
+        Thread.sleep(2000);
+
+        // Select name
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div/div[2]/div/div/div/div[2]/div/div[2]")).click();
+        Thread.sleep(2000);
+
+        // Clear search bar
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div/div[1]/div/div[2]/span/button")).click();
+        Thread.sleep(2000);
+
+        // Select all contacts
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div/header/div/span/div/div/button")).click();
+        Thread.sleep(2000);
+
+        // Type in Lentz
+        actions.moveToElement(inputField).click().sendKeys("Lentz Fortune").perform();
+        Thread.sleep(2000);
+
+        // Select name
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div/div[2]/div/div/div/div[2]/div/div[2]")).click();
+        Thread.sleep(2000);
+
+        // Clear search bar
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div/div[1]/div/div[2]/span/button")).click();
+        Thread.sleep(2000);
+
+        // Select check mark
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div/span/div/div/div")).click();
+        Thread.sleep(2000);
+
+        // Select my contacts
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/span/div/div/div/div[2]/button[1]")).click();
+        Thread.sleep(2000);
+
+        // Select back button
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/span/div/header/div/div[1]/div")).click();
+        Thread.sleep(2000);
+
 
 
 
