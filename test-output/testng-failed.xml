@@ -5,8 +5,11 @@
     <classes>
       <class name="StatusTest">
         <methods>
+          <include name="testDeleteStatus"/>
+          <include name="testChangePrivacy"/>
           <include name="setUp"/>
-          <include name="testStatus"/>
+          <include name="testImageStatus"/>
+          <include name="testViewStatus"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- StatusTest -->
