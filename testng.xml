@@ -6,7 +6,11 @@
         <classes>
             <class name = "StatusTest">
                 <methods>
-                    <include name="testStatus"></include>
+                    <include name="testTextStatus"></include>
+                    <include name="testImageStatus"></include>
+                    <include name="testViewStatus"></include>
+                    <include name="testDeleteStatus"></include>
+                    <include name="testChangePrivacy"></include>
                 </methods>
             </class>
         </classes>
