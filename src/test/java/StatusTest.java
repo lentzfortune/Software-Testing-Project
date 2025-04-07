@@ -35,7 +35,7 @@ public class StatusTest {
 
         // Wait for manual login :(
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
-        WebElement chatList = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[3]/div/header/div/div/div/div/span/div/div[2]/div[2]/button")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[3]/div/header/div/div/div/div/span/div/div[2]/div[2]/button")));
         Thread.sleep(2000);
 
 
