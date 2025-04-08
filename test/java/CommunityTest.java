@@ -32,11 +32,41 @@ public class CommunityTest {
 
         driver.get("https://web.whatsapp.com/");
 
+        // Opens Whatsapp
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[3]/div/header/div/div/div/div/span/div/div[2]/div[2]/button")));
         Thread.sleep(2000);
 
+        // Press Community
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/header/div/div/div/div/span/div/div[1]/div[4]/button")).click();
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[2]/div[1]/span/div/span/div/div/div/div/div/div/div[1]/div/div")).click();
+        Thread.sleep(2000);
+        
+        // Creating the community
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[2]/div[1]/span/div/span/div/div/div/div/div[2]/div")).click();
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[2]/div[1]/span/div/span/div/div/div/div[3]/div/div[2]/div[3]/div/div/p")).sendKeys("T");
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[2]/div[1]/span/div/span/div/div/div/div[3]/div/div[2]/div[3]/div/div/p")).sendKeys("e");
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[2]/div[1]/span/div/span/div/div/div/div[3]/div/div[2]/div[3]/div/div/p")).sendKeys("s");
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[2]/div[1]/span/div/span/div/div/div/div[3]/div/div[2]/div[3]/div/div/p")).sendKeys("t");
+        Thread.sleep(2000);
 
+        // Adds Emoji
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[2]/div[1]/span/div/span/div/div[1]/div/div[3]/div/div[2]/span/div/button/span")).click();
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[5]/div/div[1]/div/div[2]/div/div/div/div/div/div[2]/div/div/div/span[1]")).click();
+        Thread.sleep(2000);
+
+        // Adding Profile Picture
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[2]/div[1]/span/div/span/div/div[1]/div/div[2]/div/button[1]")).click();
+        WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
+        fileInput.sendKeys("C:\\Users\\redsl\\IdeaProjects\\test\\arduino.png");
+        Thread.sleep(2000);
+        
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/div/div/div/div/div/div/div/div[2]/span/div/div")).click();
+        Thread.sleep(2000);
+
+        // Creates Community
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[2]/div[1]/span/div/span/div/div[2]/span/div")).click();
+        Thread.sleep(2000);
     }
 
     @Test(priority = 2) public void addingAndKickingGroups() throws InterruptedException {
