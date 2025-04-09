@@ -4,13 +4,21 @@
     <test verbose="2" preserve-order="true"
           name="C:/Users/jorda/OneDrive - Florida Gulf Coast University/Projects/intellij/WhatsApp-Testing">
         <classes>
-            <class name = "StatusTest">
+<!--            <class name = "StatusTest">-->
+<!--                <methods>-->
+<!--                    <include name="testTextStatus"></include>-->
+<!--                    <include name="testImageStatus"></include>-->
+<!--                    <include name="testViewStatus"></include>-->
+<!--                    <include name="testDeleteStatus"></include>-->
+<!--                    <include name="testChangePrivacy"></include>-->
+<!--                </methods>-->
+<!--            </class>-->
+            <class name = "NotificationTest">
                 <methods>
-                    <include name="testTextStatus"></include>
-                    <include name="testImageStatus"></include>
-                    <include name="testViewStatus"></include>
-                    <include name="testDeleteStatus"></include>
-                    <include name="testChangePrivacy"></include>
+                    <include name="testMuteNotifications"></include>
+                    <include name="testNotificationReceivedWhenMuted"></include>
+                    <include name="testUnmuteNotifications"></include>
+                    <include name="testNotificationReceivedWhenUnmuted"></include>
                 </methods>
             </class>
         </classes>
