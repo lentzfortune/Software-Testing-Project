@@ -1,7 +1,8 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -10,10 +11,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
 import java.time.Duration;
+import org.openqa.selenium.*;
 
-public class CommunityTest {
+public class Main {
     WebDriver driver;
     WebDriverWait wait;
     Actions action;
@@ -21,8 +22,8 @@ public class CommunityTest {
 
 
     @BeforeClass public void setUp() throws AWTException {
-        System.setProperty("webdriver.gecko.driver", "C:\\chromedriver-win64\\chromedriver.exe");
-        driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver-win64\\chromedriver.exe");
+        driver = new ChromeDriver();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         action = new Actions(driver);
         robot = new Robot();
@@ -41,7 +42,7 @@ public class CommunityTest {
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/header/div/div/div/div/span/div/div[1]/div[4]/button")).click();
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[2]/div[1]/span/div/span/div/div/div/div/div/div/div[1]/div/div")).click();
         Thread.sleep(2000);
-        
+
         // Creating the community
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[2]/div[1]/span/div/span/div/div/div/div/div[2]/div")).click();
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[2]/div[1]/span/div/span/div/div/div/div[3]/div/div[2]/div[3]/div/div/p")).sendKeys("T");
@@ -60,13 +61,13 @@ public class CommunityTest {
         WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
         fileInput.sendKeys("C:\\Users\\redsl\\IdeaProjects\\test\\arduino.png");
         Thread.sleep(2000);
-        
+
         driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/div/div/div/div/div/div/div/div[2]/span/div/div")).click();
         Thread.sleep(2000);
 
         // Creates Community
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[2]/div[1]/span/div/span/div/div[2]/span/div")).click();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
     }
 
     @Test(priority = 2) public void sendingMessages() throws InterruptedException {
@@ -164,6 +165,8 @@ public class CommunityTest {
         Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/header/div/div[1]/div/span")).click();
         Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[2]/div[1]/span/div/span/div/div/div/div[1]/div[1]/div[2]/div/div")).click();
+        Thread.sleep(4000);
 
         // Creates Poll
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[4]/div/footer/div[1]/div/span/div/div[1]/div/button/span")).click();
@@ -240,42 +243,103 @@ public class CommunityTest {
     }
 
     @Test(priority = 3) public void addingAndKickingMembers() throws InterruptedException {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        // Adding A member
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[4]/div/header/div[2]/div[1]/div/span")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/div/div/section/div[1]/div/div[4]/button[2]/div")).click();
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/span/div/div/div/div/div/div/div[1]/div/div[2]/div/div/div[1]/p")).sendKeys("J");
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/span/div/div/div/div/div/div/div[1]/div/div[2]/div/div/div[1]/p")).sendKeys("o");
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/span/div/div/div/div/div/div/div[1]/div/div[2]/div/div/div[1]/p")).sendKeys("r");
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/span/div/div/div/div/div/div/div[1]/div/div[2]/div/div/div[1]/p")).sendKeys("d");
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/span/div/div/div/div/div/div/div[1]/div/div[2]/div/div/div[1]/p")).sendKeys("a");
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/span/div/div/div/div/div/div/div[1]/div/div[2]/div/div/div[1]/p")).sendKeys("n");
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/span/div/div/div/div/div/div/div[2]/div/div/div/div[2]/div/div[2]/div")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/span/div/div/div/div/div/div/span[2]/div/div/div")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("html/body/div[1]/div/div/span[2]/div/span/div/div/div/div/div/div[2]/div/button[2]")).click();
+        Thread.sleep(2000);
+
+        // Kicking a member
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/div/div/section/div[2]/div/div/button[1]")).click();
+        Thread.sleep(2000);
+
+        js.executeScript("window.scrollBy(0,500)");
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/div/div/section/div[6]/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[5]/div/ul/div/li[5]/div")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/div/div/div/div/div/div[2]/div/button[2]")).click();
+        Thread.sleep(2000);
+
+        // Adding a group
+        Thread.sleep(60000);
+        js.executeScript("window.scrollBy(500,0)");
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/div/div/section/div[1]/div/div[4]/button[3]/div")).click();
+        Thread.sleep(2000);
+
+        // Creating a group
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/span/div/div/div/div[1]/div[1]/div[2]")).click();
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/span/span/div/div/div[1]/div[2]/div/div[2]/div[3]/div/div/p")).sendKeys("C");
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/span/span/div/div/div[1]/div[2]/div/div[2]/div[3]/div/div/p")).sendKeys("S");
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/span/span/div/div/div[1]/div[2]/div/div[2]/div[3]/div/div/p")).sendKeys("S");
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/span/span/div/div/div[1]/div[2]/div/div[2]/div[3]/div/div/p")).sendKeys("E");
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/span/span/div/div/div[1]/div[2]/div/div[2]/div[3]/div/div/p")).sendKeys("C");
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/span/span/div/div/div[3]/div/div/div[1]")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/span/span/div/div/div[4]/div/div/div/div/div[1]/div[3]/div/div")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/span/span/div/header/div/div[1]/div/span")).click();
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/span/span/div/div/span/div/div")).click();
+        Thread.sleep(6000);
     }
 
     @Test(priority = 4) public void editingCommunity() throws InterruptedException {
     }
 
     @Test(priority = 5) public void deletingCommunity() throws InterruptedException {
-        
-        // Opens Tab
-        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[4]/div/header/div[2]/div[1]/div/span")).click();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/div/div/section/div[2]/div/div/button[1]")).click();
 
-
-        // Suspends Community 
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,500)");
-        Thread.sleep(5000);
-        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/div/div/section/div[7]/div[4]/div[2]")).click();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/div/div/div/div[7]/button")).click();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/div/div/div/div/div/div[2]/div/button[2]")).click();
-        Thread.sleep(2000);
-        
-        // Deletes Community 
-        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[4]/div/header/div[2]/div/div/span")).click();
-        js.executeScript("window.scrollBy(0,500)");
-        Thread.sleep(5000);
-        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/div/section/div[6]/div/div[2]/div/span")).click();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/div/div/div/div/div/div[2]/div/button[2]/div/div")).click();
-        Thread.sleep(2000);
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        // Opens Tab
+//        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[4]/div/header/div[2]/div[1]/div/span")).click();
+//        Thread.sleep(2000);
+//        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/div/div/section/div[2]/div/div/button[1]")).click();
+//
+//
+//        // Suspends Community
+//        js.executeScript("window.scrollBy(0,500)");
+//        Thread.sleep(5000);
+//        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/div/div/section/div[7]/div[4]/div[2]")).click();
+//        Thread.sleep(2000);
+//        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/div/div/div/div[7]/button")).click();
+//        Thread.sleep(2000);
+//        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/div/div/div/div/div/div[2]/div/button[2]")).click();
+//        Thread.sleep(2000);
+//
+//        // Deletes Community
+//        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[4]/div/header/div[2]/div/div/span")).click();
+//        js.executeScript("window.scrollBy(0,500)");
+//        Thread.sleep(5000);
+//        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/div/section/div[6]/div/div[2]/div/span")).click();
+//        Thread.sleep(2000);
+//        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/div/div/div/div/div/div[2]/div/button[2]/div/div")).click();
+//        Thread.sleep(2000);
     }
 
     @AfterClass public void tearDown() {
         // Closes Window
-        driver.quit();
+//        driver.quit();
     }
 }
