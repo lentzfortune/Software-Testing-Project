@@ -340,8 +340,244 @@ public class NotificationTest {
 
     @Test(priority = 5)
     public void testDifferentChatNotifications() throws InterruptedException {
-        // Test notifications for deleted chats, logging out and in again, blocked contacts
+        // Select profile
+        driver1.findElement(By.xpath("//*[@id=\"main\"]/header/div[1]")).click();
+        Thread.sleep(2000);
 
+        // Scroll down
+
+
+        // Block user
+        driver1.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[5]/span/div/span/div/div/section/div[9]/div[1]")).click();
+        Thread.sleep(2000);
+
+        // Confirm
+        driver1.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div[2]/div/button[2]")).click();
+        Thread.sleep(2000);
+
+        driver1.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[5]/span/div/span/div/header/div/div[1]/div")).click();
+        Thread.sleep(2000);
+
+        // Message from blocked user
+        WebElement inputField = driver2.findElement(By.xpath("//*[@id=\"side\"]/div[1]/div/div[2]/div/div/div[1]"));
+        Thread.sleep(2000);
+
+        // Type in Jordan
+        action2.moveToElement(inputField).click().sendKeys("Jordan Robertson").perform();
+        Thread.sleep(2000);
+
+        // Select chat
+        driver2.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[2]")).click();
+        Thread.sleep(2000);
+
+        // Select message box
+        WebElement messageBox = driver2.findElement(By.xpath("//*[@id=\"main\"]/footer/div[1]/div/span/div/div[2]/div[1]/div[2]/div[1]"));
+        Thread.sleep(2000);
+
+        // Type a message
+        action2.moveToElement(messageBox).click().sendKeys("I am blocked").perform();
+        Thread.sleep(2000);
+
+        // Send message
+        driver2.findElement(By.xpath("//*[@id=\"main\"]/footer/div[1]/div/span/div/div[2]/div[2]/button")).click();
+        Thread.sleep(2000);
+
+        // Send message in group chat
+        // Message from blocked user
+        inputField = driver2.findElement(By.xpath("//*[@id=\"side\"]/div[1]/div/div[2]/div/div/div[1]"));
+        Thread.sleep(2000);
+
+        // Type in Jordan
+        action2.moveToElement(inputField).click().sendKeys("Jordan Robertson").perform();
+        Thread.sleep(2000);
+
+        // Select chat
+        driver2.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[4]")).click();
+        Thread.sleep(2000);
+
+        // Select message box
+        messageBox = driver2.findElement(By.xpath("//*[@id=\"main\"]/footer/div[1]/div/span/div/div[2]/div[1]/div[2]/div[1]"));
+        Thread.sleep(2000);
+
+        // Type a message
+        action2.moveToElement(messageBox).click().sendKeys("I am still blocked").perform();
+        Thread.sleep(2000);
+
+        // Send message
+        driver2.findElement(By.xpath("//*[@id=\"main\"]/footer/div[1]/div/span/div/div[2]/div[2]/button")).click();
+        Thread.sleep(2000);
+
+        // Check group chat
+        driver1.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[4]")).click();
+        Thread.sleep(2000);
+
+        // Switch back to blocked user
+        driver1.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[2]")).click();
+        Thread.sleep(2000);
+
+        // Unblock
+        driver1.findElement(By.xpath("//*[@id=\"main\"]/footer/div/div/div[2]/button")).click();
+        Thread.sleep(2000);
+
+        // Confirm
+        driver1.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div[2]/div/button[2]")).click();
+        Thread.sleep(2000);
+
+        // Message from unblocked user
+        inputField = driver2.findElement(By.xpath("//*[@id=\"side\"]/div[1]/div/div[2]/div/div/div[1]"));
+        Thread.sleep(2000);
+
+        // Type in Jordan
+        action2.moveToElement(inputField).click().sendKeys("Jordan Robertson").perform();
+        Thread.sleep(2000);
+
+        // Select chat
+        driver2.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[2]")).click();
+        Thread.sleep(2000);
+
+        // Select message box
+        messageBox = driver2.findElement(By.xpath("//*[@id=\"main\"]/footer/div[1]/div/span/div/div[2]/div[1]/div[2]/div[1]"));
+        Thread.sleep(2000);
+
+        // Type a message
+        action2.moveToElement(messageBox).click().sendKeys("I am blocked").perform();
+        Thread.sleep(2000);
+
+        // Send message
+        driver2.findElement(By.xpath("//*[@id=\"main\"]/footer/div[1]/div/span/div/div[2]/div[2]/button")).click();
+        Thread.sleep(2000);
+
+        // Delete chat
+        driver1.findElement(By.xpath("//*[@id=\"main\"]/header/div[1]")).click();
+        Thread.sleep(2000);
+
+        // Scroll
+
+        // Select delete chat
+        driver1.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[5]/span/div/span/div/div/section/div[10]/div")).click();
+        Thread.sleep(2000);
+
+        // Confirm
+        driver1.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div[2]/div/button[2]")).click();
+        Thread.sleep(2000);
+
+        // Send message from deleted user
+        inputField = driver2.findElement(By.xpath("//*[@id=\"side\"]/div[1]/div/div[2]/div/div/div[1]"));
+        Thread.sleep(2000);
+
+        // Type in Jordan
+        action2.moveToElement(inputField).click().sendKeys("Jordan Robertson").perform();
+        Thread.sleep(2000);
+
+        // Select chat
+        driver2.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[2]")).click();
+        Thread.sleep(2000);
+
+        // Select message box
+        messageBox = driver2.findElement(By.xpath("//*[@id=\"main\"]/footer/div[1]/div/span/div/div[2]/div[1]/div[2]/div[1]"));
+        Thread.sleep(2000);
+
+        // Type a message
+        action2.moveToElement(messageBox).click().sendKeys("I am blocked").perform();
+        Thread.sleep(2000);
+
+        // Send message
+        driver2.findElement(By.xpath("//*[@id=\"main\"]/footer/div[1]/div/span/div/div[2]/div[2]/button")).click();
+        Thread.sleep(2000);
+
+        // Refresh chats
+        driver1.findElement(By.xpath("//*[@id=\"side\"]/div[1]/div/div[2]/span/button")).click();
+        Thread.sleep(2000);
+
+        // Search bar
+        inputField = driver1.findElement(By.xpath("//*[@id=\"side\"]/div[1]/div/div[2]/div/div/div[1]"));
+        Thread.sleep(2000);
+
+        // Type in Trystan
+        action1.moveToElement(inputField).click().sendKeys("Trystan Robertson").perform();
+        Thread.sleep(2000);
+
+        // Log out
+        driver1.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/header/div/div/div/div/span/div/div[2]/div[1]/button")).click();
+        Thread.sleep(2000);
+
+        // Log out button
+        driver1.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div/div[2]/div/div/div/button[8]/div")).click();
+        Thread.sleep(2000);
+
+        // Confirm
+        driver1.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div[2]/div/button[2]")).click();
+        Thread.sleep(2000);
+
+        // Log in
+        wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[3]/div/header/div/div/div/div/span/div/div[2]/div[2]/button")));
+        Thread.sleep(2000);
+
+        // Search bar
+        inputField = driver1.findElement(By.xpath("//*[@id=\"side\"]/div[1]/div/div[2]/div/div/div[1]"));
+        Thread.sleep(2000);
+
+        // Type in Trystan
+        action1.moveToElement(inputField).click().sendKeys("Trystan Robertson").perform();
+        Thread.sleep(2000);
+
+        // Click chats
+        driver1.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[2]")).click();
+        Thread.sleep(2000);
+
+        driver1.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[4]")).click();
+        Thread.sleep(2000);
+
+        // Unread chat
+        // Select group chat
+        WebElement chat = driver1.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[2]"));
+        Thread.sleep(2000);
+
+        // Select down arrow
+        action1.moveToElement(chat).perform();
+        Thread.sleep(2000);
+
+        driver1.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[4]/div/div/div/div[2]/div[2]/div[2]/span[2]/button")).click();
+        Thread.sleep(2000);
+
+        // Mark as unread
+        driver1.findElement(By.xpath("//*[@id=\"app\"]/div/span[5]/div/ul/div/li[4]")).click();
+        Thread.sleep(2000);
+
+        // Archive chats
+        // Select group chat
+        chat = driver1.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[2]"));
+        Thread.sleep(2000);
+
+        // Select down arrow
+        action1.moveToElement(chat).perform();
+        Thread.sleep(2000);
+
+        driver1.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[4]/div/div/div/div[2]/div[2]/div[2]/span[2]/button")).click();
+        Thread.sleep(2000);
+
+        // Archive chat
+        driver1.findElement(By.xpath("//*[@id=\"app\"]/div/span[5]/div/ul/div/li[1]")).click();
+        Thread.sleep(2000);
+
+        // Send message
+        action2.moveToElement(messageBox).click().sendKeys("I am archived").perform();
+        Thread.sleep(2000);
+
+        // Send message
+        driver2.findElement(By.xpath("//*[@id=\"main\"]/footer/div[1]/div/span/div/div[2]/div[2]/button")).click();
+        Thread.sleep(2000);
+
+        // Select down arrow
+        action1.moveToElement(chat).perform();
+        Thread.sleep(2000);
+
+        driver1.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[4]/div/div/div/div[2]/div[2]/div[2]/span[2]/button")).click();
+        Thread.sleep(2000);
+
+        // Unarchive chat
+        driver1.findElement(By.xpath("//*[@id=\"app\"]/div/span[5]/div/ul/div/li[1]")).click();
+        Thread.sleep(2000);
     }
 
     @AfterClass
