@@ -245,11 +245,37 @@ public class CommunityTest {
     @Test(priority = 4) public void editingCommunity() throws InterruptedException {
     }
 
-    @Test(priority = 5) public void exitCommunity() throws InterruptedException {
+    @Test(priority = 5) public void deletingCommunity() throws InterruptedException {
+        
+        // Opens Tab
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[4]/div/header/div[2]/div[1]/div/span")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/div/div/section/div[2]/div/div/button[1]")).click();
+
+
+        // Suspends Community 
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,500)");
+        Thread.sleep(5000);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/div/div/section/div[7]/div[4]/div[2]")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/div/div/div/div[7]/button")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/div/div/div/div/div/div[2]/div/button[2]")).click();
+        Thread.sleep(2000);
+        
+        // Deletes Community 
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[4]/div/header/div[2]/div/div/span")).click();
+        js.executeScript("window.scrollBy(0,500)");
+        Thread.sleep(5000);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/div/section/div[6]/div/div[2]/div/span")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/div/div/div/div/div/div[2]/div/button[2]/div/div")).click();
+        Thread.sleep(2000);
     }
 
     @AfterClass public void tearDown() {
+        // Closes Window
         driver.quit();
     }
-
 }
