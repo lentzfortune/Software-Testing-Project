@@ -6,8 +6,8 @@
       <class name="NotificationTest">
         <methods>
           <include name="tearDown"/>
-          <include name="testNotificationReceivedWhenUnmuted"/>
           <include name="setUp"/>
+          <include name="testDifferentChatNotifications"/>
         </methods>
       </class> <!-- NotificationTest -->
     </classes>

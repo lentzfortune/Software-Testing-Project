@@ -19,6 +19,7 @@
                     <include name="testNotificationReceivedWhenMuted"></include>
                     <include name="testUnmuteNotifications"></include>
                     <include name="testNotificationReceivedWhenUnmuted"></include>
+                    <include name="testDifferentChatNotifications"></include>
                 </methods>
             </class>
         </classes>

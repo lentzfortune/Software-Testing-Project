@@ -440,7 +440,7 @@ public class NotificationTest {
         Thread.sleep(2000);
 
         // Type a message
-        action2.moveToElement(messageBox).click().sendKeys("I am blocked").perform();
+        action2.moveToElement(messageBox).click().sendKeys("I am unblocked").perform();
         Thread.sleep(2000);
 
         // Send message
@@ -478,7 +478,7 @@ public class NotificationTest {
         Thread.sleep(2000);
 
         // Type a message
-        action2.moveToElement(messageBox).click().sendKeys("I am blocked").perform();
+        action2.moveToElement(messageBox).click().sendKeys("Dont delete me :(").perform();
         Thread.sleep(2000);
 
         // Send message
@@ -510,6 +510,7 @@ public class NotificationTest {
         Thread.sleep(2000);
 
         // Log in
+        wait1 = new WebDriverWait(driver1, Duration.ofSeconds(120));
         wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[3]/div/header/div/div/div/div/span/div/div[2]/div[2]/button")));
         Thread.sleep(2000);
 
@@ -577,6 +578,15 @@ public class NotificationTest {
 
         // Unarchive chat
         driver1.findElement(By.xpath("//*[@id=\"app\"]/div/span[5]/div/ul/div/li[1]")).click();
+        Thread.sleep(2000);
+
+        // Type message
+        messageBox = driver1.findElement(By.xpath("//*[@id=\"main\"]/footer/div[1]/div/span/div/div[2]/div[1]/div[2]/div[1]"));
+        action1.moveToElement(messageBox).click().sendKeys("Done").perform();
+        Thread.sleep(2000);
+
+        // Send message
+        driver1.findElement(By.xpath("//*[@id=\"main\"]/footer/div[1]/div/span/div/div[2]/div[2]/button")).click();
         Thread.sleep(2000);
     }
 
