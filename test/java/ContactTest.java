@@ -74,7 +74,79 @@ public class CommunityTest {
         Thread.sleep(5000);
     }
 
-    @Test(priority = 2) public void addingToFavorites() throws InterruptedException {
+    @Test(priority = 2) public void mediaView() throws InterruptedException {
+
+        // Click Image
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[3]/div[2]/div/div[1]/div[2]/div/div[2]/button/div/div")).click();
+        Thread.sleep(3000);
+
+        // Show message
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[1]/button/span")).click();
+        Thread.sleep(3000);
+
+        // Click Image
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[3]/div[2]/div/div[1]/div[2]/div/div[2]/button/div/div")).click();
+        Thread.sleep(3000);
+
+        // Pin message
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[3]/button/span")).click();
+        Thread.sleep(3000);
+
+        // Select 24 hours
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/div/div/div/div/div/div[1]/form/ol/li[1]/label/div/div/span/div/span")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/div/div/div/div/div/div[2]/div/button[2]")).click();
+        Thread.sleep(3000);
+
+        // Show pin
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[8]/button/span")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[4]/div/span[1]/div/button/div/div/div/div[4]/span/div")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[4]/div/span[1]/div/button/div/div/div/div[4]/span/div")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[4]/div/span[1]/div/button/div/div/div/div[4]/span/div")).click();
+        Thread.sleep(3000);
+
+        // Click Image
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[3]/div[2]/div/div[1]/div[2]/div/div[2]/button/div/div")).click();
+        Thread.sleep(3000);
+
+        // Unpin
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[3]/button/span")).click();
+        Thread.sleep(3000);
+
+        // Show unpin
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[8]/button/span")).click();
+        Thread.sleep(3000);
+
+        // Click Image
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[3]/div[2]/div/div[1]/div[2]/div/div[2]/button/div/div")).click();
+        Thread.sleep(3000);
+
+        // React
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[4]/button/span")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[5]/div/div/div/div/div/div/div[2]/div/div/img")).click();
+        Thread.sleep(3000);
+
+        // Show react
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[8]/button/span")).click();
+        Thread.sleep(3000);
+
+        // Click Image
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[3]/div[2]/div/div[1]/div[2]/div/div[2]/button/div/div")).click();
+        Thread.sleep(3000);
+
+        // Unreact
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[4]/button/span")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[5]/div/div/div/div/div/div/div[2]/div/div/img")).click();
+        Thread.sleep(3000);
+
+        // Show unreact
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[8]/button/span")).click();
+        Thread.sleep(3000);
     }
 
     @Test(priority = 3) public void pinningMessage() throws InterruptedException {
