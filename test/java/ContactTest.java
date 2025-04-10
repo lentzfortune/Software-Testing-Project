@@ -149,7 +149,31 @@ public class CommunityTest {
         Thread.sleep(3000);
     }
 
-    @Test(priority = 3) public void pinningMessage() throws InterruptedException {
+    @Test(priority = 3) public void downloadMedia() throws InterruptedException {
+
+        // Click Image
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[3]/div[2]/div/div[1]/div[2]/div/div[2]/button/div/div")).click();
+        Thread.sleep(3000);
+
+        // Download Image
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[6]/button/span")).click();
+        Thread.sleep(3000);
+
+        // Exit
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[8]/button/span")).click();
+        Thread.sleep(3000);
+
+        // Reupload Image
+        WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
+        Thread.sleep(2000);
+
+        // Upload the photo
+        fileInput.sendKeys("C:\\Users\\redsl\\Downloads\\WhatsApp Image 2025-04-07 at 9.16.27 PM (1).jpeg");
+        Thread.sleep(2000);
+
+        // Send
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[2]/div[2]/span/div/div/div/div[2]/div/div[2]/div[2]/div/div")).click();
+        Thread.sleep(2000);
     }
 
     @Test(priority = 4) public void blockAndReport() throws InterruptedException {
