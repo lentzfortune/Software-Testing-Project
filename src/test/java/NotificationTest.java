@@ -509,6 +509,7 @@ public class NotificationTest {
         driver1.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div[2]/div/button[2]")).click();
         Thread.sleep(2000);
 
+
         // Log in
         wait1 = new WebDriverWait(driver1, Duration.ofSeconds(120));
         wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[3]/div/header/div/div/div/div/span/div/div[2]/div[2]/button")));
@@ -530,7 +531,7 @@ public class NotificationTest {
         Thread.sleep(2000);
 
         // Unread chat
-        // Select group chat
+        // Select chat
         WebElement chat = driver1.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[2]"));
         Thread.sleep(2000);
 
@@ -538,15 +539,19 @@ public class NotificationTest {
         action1.moveToElement(chat).perform();
         Thread.sleep(2000);
 
-        driver1.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[4]/div/div/div/div[2]/div[2]/div[2]/span[2]/button")).click();
+        driver1.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[2]/div/div/div/div[2]/div[2]/div[2]/span[3]/button")).click();
         Thread.sleep(2000);
 
         // Mark as unread
         driver1.findElement(By.xpath("//*[@id=\"app\"]/div/span[5]/div/ul/div/li[4]")).click();
         Thread.sleep(2000);
 
+        // Click into chat
+        driver1.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[2]")).click();
+        Thread.sleep(2000);
+
         // Archive chats
-        // Select group chat
+        // Select chat
         chat = driver1.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[2]"));
         Thread.sleep(2000);
 
@@ -554,7 +559,7 @@ public class NotificationTest {
         action1.moveToElement(chat).perform();
         Thread.sleep(2000);
 
-        driver1.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[4]/div/div/div/div[2]/div[2]/div[2]/span[2]/button")).click();
+        driver1.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[2]/div/div/div/div[2]/div[2]/div[2]/span[3]/button")).click();
         Thread.sleep(2000);
 
         // Archive chat
@@ -567,17 +572,6 @@ public class NotificationTest {
 
         // Send message
         driver2.findElement(By.xpath("//*[@id=\"main\"]/footer/div[1]/div/span/div/div[2]/div[2]/button")).click();
-        Thread.sleep(2000);
-
-        // Select down arrow
-        action1.moveToElement(chat).perform();
-        Thread.sleep(2000);
-
-        driver1.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[4]/div/div/div/div[2]/div[2]/div[2]/span[2]/button")).click();
-        Thread.sleep(2000);
-
-        // Unarchive chat
-        driver1.findElement(By.xpath("//*[@id=\"app\"]/div/span[5]/div/ul/div/li[1]")).click();
         Thread.sleep(2000);
 
         // Type message

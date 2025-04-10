@@ -9,19 +9,33 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">All Test Suite</th></tr>
-<tr><td><a href="#t0">C:/Users/jorda/OneDrive - Florida Gulf Coast University/Projects/intellij/WhatsApp-Testing</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">333,325</td><td></td><td></td></tr>
+<tr><td><a href="#t0">C:/Users/jorda/OneDrive - Florida Gulf Coast University/Projects/intellij/WhatsApp-Testing</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">299,569</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">All Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">C:/Users/jorda/OneDrive - Florida Gulf Coast University/Projects/intellij/WhatsApp-Testing &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">NotificationTest</td><td><a href="#m0">testDifferentChatNotifications</a></td><td rowspan="1">1744239781348</td><td rowspan="1">151076</td></tr><tr><th colspan="4">C:/Users/jorda/OneDrive - Florida Gulf Coast University/Projects/intellij/WhatsApp-Testing &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">NotificationTest</td><td><a href="#m1">testMuteNotifications</a></td><td rowspan="1">1744239640231</td><td rowspan="1">31253</td></tr><tr class="passedeven"><td><a href="#m2">testNotificationReceivedWhenMuted</a></td><td rowspan="1">1744239671487</td><td rowspan="1">45493</td></tr><tr class="passedeven"><td><a href="#m3">testNotificationReceivedWhenUnmuted</a></td><td rowspan="1">1744239737027</td><td rowspan="1">44321</td></tr><tr class="passedeven"><td><a href="#m4">testUnmuteNotifications</a></td><td rowspan="1">1744239716982</td><td rowspan="1">20043</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">All Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">C:/Users/jorda/OneDrive - Florida Gulf Coast University/Projects/intellij/WhatsApp-Testing &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">NotificationTest</td><td><a href="#m0">testDifferentChatNotifications</a></td><td rowspan="1">1744244735786</td><td rowspan="1">119197</td></tr><tr><th colspan="4">C:/Users/jorda/OneDrive - Florida Gulf Coast University/Projects/intellij/WhatsApp-Testing &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">NotificationTest</td><td><a href="#m1">testMuteNotifications</a></td><td rowspan="1">1744244595589</td><td rowspan="1">31266</td></tr><tr class="passedeven"><td><a href="#m2">testNotificationReceivedWhenMuted</a></td><td rowspan="1">1744244626861</td><td rowspan="1">44575</td></tr><tr class="passedeven"><td><a href="#m3">testNotificationReceivedWhenUnmuted</a></td><td rowspan="1">1744244691394</td><td rowspan="1">44390</td></tr><tr class="passedeven"><td><a href="#m4">testUnmuteNotifications</a></td><td rowspan="1">1744244671438</td><td rowspan="1">19954</td></tr></tbody>
 </table>
-<h2>C:/Users/jorda/OneDrive - Florida Gulf Coast University/Projects/intellij/WhatsApp-Testing</h2><h3 id="m0">NotificationTest#testDifferentChatNotifications</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id=&quot;app&quot;]/div/div[3]/div/header/div/div/div/div/span/div/div[2]/div[2]/button (tried for 60 second(s) with 500 milliseconds interval)
+<h2>C:/Users/jorda/OneDrive - Florida Gulf Coast University/Projects/intellij/WhatsApp-Testing</h2><h3 id="m0">NotificationTest#testDifferentChatNotifications</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id=&quot;pane-side&quot;]/div[1]/div/div/div[4]/div/div/div/div[2]/div[2]/div[2]/span[2]/button
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.30.0&apos;, revision: &apos;509c7f17cc*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;24&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 137.0.1, moz:accessibilityChecks: false, moz:buildID: 20250407111027, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 1456, moz:profile: C:\Users\jorda\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 408c64b7-12b8-4a44-9d45-610b5ba65bca
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at NotificationTest.testDifferentChatNotifications(NotificationTest.java:514)
+Command: [7faec930-6b81-4a33-8156-dadeac73691c, findElement {value=//*[@id=&quot;pane-side&quot;]/div[1]/div/div/div[4]/div/div/div/div[2]/div[2]/div[2]/span[2]/button, using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 137.0.1, moz:accessibilityChecks: false, moz:buildID: 20250407111027, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 12820, moz:profile: C:\Users\jorda\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 7faec930-6b81-4a33-8156-dadeac73691c
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at NotificationTest.testDifferentChatNotifications(NotificationTest.java:541)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
