@@ -4,15 +4,15 @@
     <test verbose="2" preserve-order="true"
           name="C:/Users/jorda/OneDrive - Florida Gulf Coast University/Projects/intellij/WhatsApp-Testing">
         <classes>
-<!--            <class name = "StatusTest">-->
-<!--                <methods>-->
-<!--                    <include name="testTextStatus"></include>-->
-<!--                    <include name="testImageStatus"></include>-->
-<!--                    <include name="testViewStatus"></include>-->
-<!--                    <include name="testDeleteStatus"></include>-->
-<!--                    <include name="testChangePrivacy"></include>-->
-<!--                </methods>-->
-<!--            </class>-->
+            <class name = "StatusTest">
+                <methods>
+                    <include name="testTextStatus"></include>
+                    <include name="testImageStatus"></include>
+                    <include name="testViewStatus"></include>
+                    <include name="testDeleteStatus"></include>
+                    <include name="testChangePrivacy"></include>
+                </methods>
+            </class>
             <class name = "NotificationTest">
                 <methods>
                     <include name="testMuteNotifications"></include>
@@ -20,6 +20,42 @@
                     <include name="testUnmuteNotifications"></include>
                     <include name="testNotificationReceivedWhenUnmuted"></include>
                     <include name="testDifferentChatNotifications"></include>
+                </methods>
+            </class>
+            <class name = "MessagingTest">
+                <methods>
+                    <include name="testSendingMultipleMessages"></include>
+                    <include name="testPhotos"></include>
+                    <include name="testVideosAndForwarding"></include>
+                    <include name="testStickers"></include>
+                    <include name="testVoiceMessage"></include>
+                </methods>
+            </class>
+            <class name = "SettingsTest">
+                <methods>
+                    <include name="testDeleteAccountPage"></include>
+                    <include name="testEditAccountPage"></include>
+                    <include name="testBlockAccount"></include>
+                    <include name="testReadReceipts"></include>
+                    <include name="testWallpaperChange"></include>
+                </methods>
+            </class>
+            <class name="ContactTest">
+                <methods>
+                    <include name="addingContactToFavorite"></include>
+                    <include name="mediaView"></include>
+                    <include name="downloadMedia"></include>
+                    <include name="starringMessages"></include>
+                    <include name="blockUser"></include>
+                </methods>
+            </class>
+            <class name="CommunityTest">
+                <methods>
+                    <include name="createCommunity"></include>
+                    <include name="sendingMessages"></include>
+                    <include name="addingAndKickingMembers"></include>
+                    <include name="editingCommunity"></include>
+                    <include name="deletingCommunity"></include>
                 </methods>
             </class>
         </classes>

@@ -3,13 +3,21 @@
 <suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="C:/Users/jorda/OneDrive - Florida Gulf Coast University/Projects/intellij/WhatsApp-Testing(failed)">
     <classes>
-      <class name="NotificationTest">
+      <class name="ContactTest">
         <methods>
-          <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="testDifferentChatNotifications"/>
+          <include name="downloadMedia"/>
+          <include name="tearDown"/>
+          <include name="mediaView"/>
         </methods>
-      </class> <!-- NotificationTest -->
+      </class> <!-- ContactTest -->
+      <class name="MessagingTest">
+        <methods>
+          <include name="testSendingMultipleMessages"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- MessagingTest -->
     </classes>
   </test> <!-- C:/Users/jorda/OneDrive - Florida Gulf Coast University/Projects/intellij/WhatsApp-Testing(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->
