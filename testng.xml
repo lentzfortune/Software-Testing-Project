@@ -2,11 +2,25 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
-          name="C:/Users/jorda/OneDrive - Florida Gulf Coast University/Projects/intellij/WhatsApp-Testing">
+          name="Daniel Tests">
         <classes>
-            <class name = "StatusTest">
+            <class name = "MessagingTest">
                 <methods>
-                    <include name="testStatus"></include>
+                    <include name="testSendingMultipleMessages"></include>
+                    <include name="testPhotos"></include>
+                    <include name="testVideosAndForwarding"></include>
+                    <include name="testStickers"></include>
+                    <include name="testVoiceMessage"></include>
+                </methods>
+            </class>
+            <class name = "SettingsTest">
+                <methods>
+                    <include name="testDeleteAccountPage"></include>
+                    <include name="testEditAccountPage"></include>
+                    <include name="testBlockAccount"></include>
+                    <include name="testReadReceipts"></include>
+                    <include name="testWallpaperChange"></include>
+
                 </methods>
             </class>
         </classes>
