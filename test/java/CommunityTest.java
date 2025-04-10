@@ -17,7 +17,7 @@ import org.openqa.selenium.*;
 
 
 
-public class Main {
+public class CommunityTest {
     WebDriver driver;
     WebDriverWait wait;
     Actions action;
