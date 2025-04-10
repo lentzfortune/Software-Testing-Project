@@ -1,19 +1,19 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import org.openqa.selenium.JavascriptExecutor;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
 import java.time.Duration;
 
-public class CommunityTest {
+public class Main {
     WebDriver driver;
     WebDriverWait wait;
     Actions action;
@@ -21,8 +21,8 @@ public class CommunityTest {
 
 
     @BeforeClass public void setUp() throws AWTException {
-        System.setProperty("webdriver.gecko.driver", "C:\\chromedriver-win64\\chromedriver.exe");
-        driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver-win64\\chromedriver.exe");
+        driver = new ChromeDriver();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         action = new Actions(driver);
         robot = new Robot();
@@ -225,7 +225,31 @@ public class CommunityTest {
         Thread.sleep(3000);
     }
 
-    @Test(priority = 5) public void deletingChats() throws InterruptedException {
+    @Test(priority = 5) public void blockUser() throws InterruptedException {
+
+        // Scroll down
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0, 2000);");
+
+        // Block user
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[8]/div[1]/div[2]")).click();
+        Thread.sleep(3000);
+
+        // Confirm
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/div/div/div/div/div/div[2]/div/button[2]")).click();
+        Thread.sleep(3000);
+
+        // Unblock User
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[8]/div[1]/div[2]")).click();
+        Thread.sleep(3000);
+
+        // Confirm
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/div/div/div/div/div/div[2]/div/button[2]")).click();
+        Thread.sleep(3000);
+
+        // Exit
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/header/div/div[1]/div/span")).click();
+        Thread.sleep(3000);
     }
 
     @AfterClass public void tearDown() {
