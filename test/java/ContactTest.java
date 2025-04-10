@@ -176,7 +176,53 @@ public class CommunityTest {
         Thread.sleep(2000);
     }
 
-    @Test(priority = 4) public void blockAndReport() throws InterruptedException {
+    @Test(priority = 4) public void starringMessages() throws InterruptedException {
+
+        // Getting to contacts page
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[4]/div/header/div[3]/div/div[3]/div/button/span")).click();
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[5]/div/ul/div/div/li[1]/div")).click();
+        Thread.sleep(4000);
+
+        // Click Image
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[3]/div[2]/div/div[1]/div[2]/div/div[2]/button/div/div")).click();
+        Thread.sleep(3000);
+
+        // Star message
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[2]/button/span")).click();
+        Thread.sleep(3000);
+
+        // Exit
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[8]/button/span")).click();
+        Thread.sleep(3000);
+
+        // Show Star Message
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[4]/div/div/div")).click();
+        Thread.sleep(3000);
+
+        // Exit Star
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/header/div/div[1]/div/span")).click();
+        Thread.sleep(3000);
+
+        // Click Image
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[3]/div[2]/div/div[1]/div[2]/div/div[2]/button/div/div")).click();
+        Thread.sleep(3000);
+
+        // Unstar message
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[2]/button/span")).click();
+        Thread.sleep(3000);
+
+        // Exit
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[8]/button/span")).click();
+        Thread.sleep(3000);
+
+        // Show Star Message
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[4]/div/div/div")).click();
+        Thread.sleep(3000);
+
+        // Exit Star
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/header/div/div[1]/div/span")).click();
+        Thread.sleep(3000);
     }
 
     @Test(priority = 5) public void deletingChats() throws InterruptedException {
