@@ -13,7 +13,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import java.awt.*;
 import java.time.Duration;
 
-public class Main {
+public class ContactTest {
     WebDriver driver;
     WebDriverWait wait;
     Actions action;
