@@ -2,7 +2,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -42,11 +41,11 @@ public class ContactTest {
 
         // Getting to contacts page
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[3]/div/div[3]/div[1]/div/div/div[1]/div/div/div")).click();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[4]/div/header/div[3]/div/div[3]/div/button/span")).click();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/div[1]/div/div/span[5]/div/ul/div/div/li[1]/div")).click();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
 
         // Scroll down
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -54,38 +53,38 @@ public class ContactTest {
 
         // Select favorite
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[7]/div/div[2]")).click();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
 
         // Show favorites
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[3]/div/div[2]/button[3]")).click();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
 
         // Goes Back
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[3]/div/div[2]/button[1]")).click();
-        Thread.sleep(5000);
+        Thread.sleep(2000);
 
         // Unfavorites
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[7]/div/div[2]")).click();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
 
         // Show favorites
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[3]/div/div[2]/button[3]")).click();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
 
         // Goes Back
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[3]/div/div[2]/button[1]")).click();
-        Thread.sleep(5000);
+        Thread.sleep(2000);
     }
 
     @Test(priority = 2) public void mediaView() throws InterruptedException {
 
         // Click Image
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[3]/div[2]/div/div[1]/div[2]/div/div[2]/button/div/div")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Show message
         driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[1]/button/span")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Hit 3 dots
         driver.findElement(By.xpath("//*[@id=\"main\"]/header/div[3]/div/div[3]/div/button")).click();
@@ -97,27 +96,27 @@ public class ContactTest {
 
         // Click Image
         driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[5]/span/div/span/div/div/section/div[3]/div[2]/div/div[1]")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Pin message
         driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[3]/button/span")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Select 24 hours
         driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/div/div/div/div/div/div[1]/form/ol/li[1]/label/div/div/span/div/span")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/div/div/div/div/div/div[2]/div/button[2]")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Show pin
         driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[8]/button")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[5]/span/div/span/div/header/div/div[1]/div")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[4]/div/span[1]/div/button/div/div/div/div[4]/span/div")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[4]/div/span[1]/div/button/div/div/div/div[4]/span/div")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Hit 3 dots
         driver.findElement(By.xpath("//*[@id=\"main\"]/header/div[3]/div/div[3]/div/button")).click();
@@ -129,58 +128,58 @@ public class ContactTest {
 
         // Click Image
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[3]/div[2]/div/div[1]/div[2]/div/div[2]/button/div/div")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Unpin
         driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[3]/button/span")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Show unpin
         driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[8]/button/span")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Click Image
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[3]/div[2]/div/div[1]/div[2]/div/div[2]/button/div/div")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // React
         driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[4]/button/span")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/div[1]/div/div/span[5]/div/div/div/div/div/div/div[2]/div/div/img")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Show react
         driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[8]/button/span")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Click Image
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[3]/div[2]/div/div[1]/div[2]/div/div[2]/button/div/div")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Unreact
         driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[4]/button/span")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/div[1]/div/div/span[5]/div/div/div/div/div/div/div[2]/div/div/img")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Show unreact
         driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[8]/button/span")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
     }
 
     @Test(priority = 3) public void downloadMedia() throws InterruptedException {
 
         // Click Image
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[3]/div[2]/div/div[1]/div[2]/div/div[2]/button/div/div")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Download Image
         driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[6]/button/span")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Exit
         driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[8]/button/span")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Reupload Image
         WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
@@ -199,49 +198,49 @@ public class ContactTest {
 
         // Getting to contacts page
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[4]/div/header/div[3]/div/div[3]/div/button/span")).click();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/div[1]/div/div/span[5]/div/ul/div/div/li[1]/div")).click();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
 
         // Click Image
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[3]/div[2]/div/div[1]/div[2]/div/div[2]/button/div/div")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Star message
         driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[2]/button/span")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Exit
         driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[8]/button/span")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Show Star Message
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[4]/div/div/div")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Exit Star
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/header/div/div[1]/div/span")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Click Image
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[3]/div[2]/div/div[1]/div[2]/div/div[2]/button/div/div")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Unstar message
         driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[2]/button/span")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Exit
         driver.findElement(By.xpath("/html/body/div[1]/div/div/span[3]/div/div/div[2]/div/div[1]/div[2]/div/div[8]/button/span")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Show Star Message
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[4]/div/div/div")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Exit Star
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/header/div/div[1]/div/span")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
     }
 
     @Test(priority = 5) public void blockUser() throws InterruptedException {
@@ -252,23 +251,23 @@ public class ContactTest {
 
         // Block user
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[8]/div[1]/div[2]")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Confirm
         driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/div/div/div/div/div/div[2]/div/button[2]")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Unblock User
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/div/section/div[8]/div[1]/div[2]")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Confirm
         driver.findElement(By.xpath("/html/body/div[1]/div/div/span[2]/div/div/div/div/div/div/div[2]/div/button[2]")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         // Exit
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/div/header/div/div[1]/div/span")).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
     }
 
     @AfterClass public void tearDown() {
