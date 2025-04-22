@@ -5,10 +5,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -21,7 +18,7 @@ public class channels {
     WebDriver driver;
     Robot robot;
     WebDriverWait wait;
-    @BeforeTest
+    @BeforeClass
     public void setup() throws InterruptedException, AWTException {
         driver = new ChromeDriver();
         robot = new Robot();
@@ -38,7 +35,8 @@ public class channels {
     //Follow channel
     @Test(priority = 0)
     public void followChannel() throws InterruptedException {
-        WebElement channelsButton = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/header/div/div/div/div/span/div/div[1]/div[3]"));
+        Thread.sleep(10000);
+        WebElement channelsButton = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/header/div/div/div/div/span/div/div[1]/div[3]/button/span"));
         channelsButton.click();
         Thread.sleep(2000);
     }
@@ -200,7 +198,7 @@ public class channels {
         //driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div[2]/div/button[2]/div")).click();
 
     }
-    @AfterMethod
+    @AfterClass
     public void tearDown() {
         driver.quit();
     }
