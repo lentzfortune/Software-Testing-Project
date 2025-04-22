@@ -58,6 +58,25 @@
                     <include name="deletingCommunity"></include>
                 </methods>
             </class>
+            <class name="ChannelsTest">
+                <methods>
+                    <include name="followChannel"></include>
+                    <include name="channelReact"></include>
+                    <include name="channelShare"></include>
+                    <include name="makeChannel"></include>
+                    <include name="takeScreenShot_share"></include>
+                    <include name="uploadChannelPic"></include>
+                </methods>
+            </class>
+            <class name="ProfileTest">
+                <methods>
+                    <include name="profilePic"></include>
+                    <include name="changeName"></include>
+                    <include name="changeStatus"></include>
+                    <include name="cannotBeBlank"></include>
+                    <include name="changeBack"></include>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
