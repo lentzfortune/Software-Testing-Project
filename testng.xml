@@ -1,80 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true"
+    <test verbose="2"
           name="C:/Users/jorda/OneDrive - Florida Gulf Coast University/Projects/intellij/WhatsApp-Testing">
         <classes>
             <class name = "StatusTest">
                 <methods>
-                    <include name="testTextStatus"></include>
-                    <include name="testImageStatus"></include>
-                    <include name="testViewStatus"></include>
-                    <include name="testDeleteStatus"></include>
-                    <include name="testChangePrivacy"></include>
+                    <include name="testTextStatus"/>
+                    <include name="testImageStatus"/>
+                    <include name="testViewStatus"/>
+                    <include name="testDeleteStatus"/>
+                    <include name="testChangePrivacy"/>
                 </methods>
             </class>
             <class name = "NotificationTest">
                 <methods>
-                    <include name="testMuteNotifications"></include>
-                    <include name="testNotificationReceivedWhenMuted"></include>
-                    <include name="testUnmuteNotifications"></include>
-                    <include name="testNotificationReceivedWhenUnmuted"></include>
-                    <include name="testDifferentChatNotifications"></include>
+                    <include name="testMuteNotifications"/>
+                    <include name="testNotificationReceivedWhenMuted"/>
+                    <include name="testUnmuteNotifications"/>
+                    <include name="testNotificationReceivedWhenUnmuted"/>
+                    <include name="testDifferentChatNotifications"/>
                 </methods>
             </class>
             <class name = "MessagingTest">
                 <methods>
-                    <include name="testSendingMultipleMessages"></include>
-                    <include name="testPhotos"></include>
-                    <include name="testVideosAndForwarding"></include>
-                    <include name="testStickers"></include>
-                    <include name="testVoiceMessage"></include>
+                    <include name="testSendingMultipleMessages"/>
+                    <include name="testPhotos"/>
+                    <include name="testVideosAndForwarding"/>
+                    <include name="testStickers"/>
+                    <include name="testVoiceMessage"/>
                 </methods>
             </class>
             <class name = "SettingsTest">
                 <methods>
-                    <include name="testDeleteAccountPage"></include>
-                    <include name="testEditAccountPage"></include>
-                    <include name="testBlockAccount"></include>
-                    <include name="testReadReceipts"></include>
-                    <include name="testWallpaperChange"></include>
+                    <include name="testDeleteAccountPage"/>
+                    <include name="testEditAccountPage"/>
+                    <include name="testBlockAccount"/>
+                    <include name="testReadReceipts"/>
+                    <include name="testWallpaperChange"/>
                 </methods>
             </class>
             <class name="ContactTest">
                 <methods>
-                    <include name="addingContactToFavorite"></include>
-                    <include name="mediaView"></include>
-                    <include name="downloadMedia"></include>
-                    <include name="starringMessages"></include>
-                    <include name="blockUser"></include>
+                    <include name="addingContactToFavorite"/>
+                    <include name="mediaView"/>
+                    <include name="downloadMedia"/>
+                    <include name="starringMessages"/>
+                    <include name="blockUser"/>
                 </methods>
             </class>
             <class name="CommunityTest">
                 <methods>
-                    <include name="createCommunity"></include>
-                    <include name="sendingMessages"></include>
-                    <include name="addingAndKickingMembers"></include>
-                    <include name="editingCommunity"></include>
-                    <include name="deletingCommunity"></include>
+                    <include name="createCommunity"/>
+                    <include name="sendingMessages"/>
+                    <include name="addingAndKickingMembers"/>
+                    <include name="editingCommunity"/>
+                    <include name="deletingCommunity"/>
                 </methods>
             </class>
             <class name="ChannelsTest">
                 <methods>
-                    <include name="followChannel"></include>
-                    <include name="channelReact"></include>
-                    <include name="channelShare"></include>
-                    <include name="makeChannel"></include>
-                    <include name="takeScreenShot_share"></include>
-                    <include name="uploadChannelPic"></include>
+                    <include name="followChannel"/>
+                    <include name="channelReact"/>
+                    <include name="channelShare"/>
+                    <include name="makeChannel"/>
+                    <include name="takeScreenShot_share"/>
+                    <include name="uploadChannelPic"/>
                 </methods>
             </class>
             <class name="ProfileTest">
                 <methods>
-                    <include name="profilePic"></include>
-                    <include name="changeName"></include>
-                    <include name="changeStatus"></include>
-                    <include name="cannotBeBlank"></include>
-                    <include name="changeBack"></include>
+                    <include name="profilePic"/>
+                    <include name="changeName"/>
+                    <include name="changeStatus"/>
+                    <include name="cannotBeBlank"/>
+                    <include name="changeBack"/>
                 </methods>
             </class>
         </classes>
