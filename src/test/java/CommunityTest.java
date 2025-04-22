@@ -306,8 +306,7 @@ public class CommunityTest {
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/span/span/div/header/div/div[1]/div/span")).click();
         Thread.sleep(2000);
 
-        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[5]/span/div/span/span/span/span/div/div/span/div/div")).click();
-        Thread.sleep(2000);
+
     }
 
     @Test(priority = 4) public void editingCommunity() throws InterruptedException {

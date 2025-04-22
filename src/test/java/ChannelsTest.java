@@ -2,10 +2,10 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -18,7 +18,7 @@ public class ChannelsTest {
     WebDriver driver;
     Robot robot;
     WebDriverWait wait;
-    @BeforeTest
+    @BeforeClass
     public void setup() throws InterruptedException, AWTException {
         driver = new ChromeDriver();
         robot = new Robot();
@@ -35,7 +35,8 @@ public class ChannelsTest {
     //Follow channel
     @Test(priority = 0)
     public void followChannel() throws InterruptedException {
-        WebElement channelsButton = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/header/div/div/div/div/span/div/div[1]/div[3]"));
+        Thread.sleep(10000);
+        WebElement channelsButton = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/header/div/div/div/div/span/div/div[1]/div[3]/button/span"));
         channelsButton.click();
         Thread.sleep(2000);
     }
@@ -123,7 +124,7 @@ public class ChannelsTest {
         WebElement plusButton = driver.findElement(By.xpath("//*[@id=\"main\"]/footer/div[1]/div/span/div/div[1]/div/button"));
         plusButton.click();
         Thread.sleep(2000);
-        File fileUpload = new File("C:\\Users\\lentz\\Downloads\\Game Night Flyer (1).png");
+        File fileUpload = new File("C:\\Users\\jorda\\OneDrive - Florida Gulf Coast University\\Projects\\intellij\\WhatsApp-Testing\\pineapple.png");
         driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[5]/div/ul/div/div/div[1]/li")).click();
         WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
         Thread.sleep(2000);
@@ -143,7 +144,7 @@ public class ChannelsTest {
         TakesScreenshot screenshot = (TakesScreenshot) driver;
         Thread.sleep(4500);
         File scr = screenshot.getScreenshotAs(OutputType.FILE);
-        File des = new File("C:\\Users\\lentz\\Downloads\\whatsappPic.png");
+        File des = new File("C:\\Users\\jorda\\OneDrive - Florida Gulf Coast University\\Projects\\intellij\\WhatsApp-Testing\\smiling.png");
         FileHandler.copy(scr, des);
         Thread.sleep(1500);
         WebElement shareButton = driver.findElement(By.xpath("//*[@id=\"main\"]/div[3]/div/div[2]/div[3]/div[4]/div/div/div[1]/div[2]/div[1]/div"));
@@ -174,7 +175,7 @@ public class ChannelsTest {
         WebElement addPic = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[5]/span/div/span/div/div/section/div[1]/div[1]/div[1]/div/button"));
         addPic.click();
         Thread.sleep(2000);
-        File picUpload = new File("C:\\Users\\lentz\\Downloads\\ChatGPT Image Apr 20, 2025, 05_28_06 PM.png");
+        File picUpload = new File("C:\\Users\\jorda\\OneDrive - Florida Gulf Coast University\\Projects\\intellij\\WhatsApp-Testing\\dragon.png");
         WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
         Thread.sleep(2000);
         fileInput.sendKeys(picUpload.getAbsolutePath());
@@ -197,13 +198,12 @@ public class ChannelsTest {
         //driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div[2]/div/button[2]/div")).click();
 
     }
-    @AfterMethod
+    @AfterClass
     public void tearDown() {
         driver.quit();
     }
 
 }
-
 
 
 

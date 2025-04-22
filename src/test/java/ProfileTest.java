@@ -4,9 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -35,7 +33,7 @@ public class ProfileTest
         WebElement addPic = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[1]/div/button"));
         addPic.click();
         Thread.sleep(2000);
-        File picUpload = new File("C:\\Users\\lentz\\Downloads\\ChatGPT Image Apr 20, 2025, 05_28_06 PM.png");
+        File picUpload = new File("C:\\Users\\jorda\\OneDrive - Florida Gulf Coast University\\Projects\\intellij\\WhatsApp-Testing\\robot.png");
         WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
         Thread.sleep(2000);
         fileInput.sendKeys(picUpload.getAbsolutePath());
@@ -48,9 +46,9 @@ public class ProfileTest
         WebElement editButton = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[2]/div[2]/div/span[2]/button"));
         editButton.click();
         for(int i = 0;i < 30;i++){
-        robot.keyPress(KeyEvent.VK_BACK_SPACE);
-        robot.keyRelease(KeyEvent.VK_BACK_SPACE);
-        Thread.sleep(100);}
+            robot.keyPress(KeyEvent.VK_BACK_SPACE);
+            robot.keyRelease(KeyEvent.VK_BACK_SPACE);
+            Thread.sleep(100);}
         WebElement selectableText = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[2]/div[2]/div[1]/div[3]/div/div/p"));
         selectableText.sendKeys("John Doe");
         Thread.sleep(1500);
@@ -59,27 +57,27 @@ public class ProfileTest
     }
     @Test(priority = 2)
     public void changeStatus() throws InterruptedException{
-    WebElement editStatus = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[4]/div[2]/div/span[2]/button"));
-    editStatus.click();
-    for(int i = 0;i < 30; i++){
-        robot.keyPress(KeyEvent.VK_BACK_SPACE);
-        robot.keyRelease(KeyEvent.VK_BACK_SPACE);
-        Thread.sleep(100);
-    }
-    WebElement selectableText = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[4]/div[2]/div[1]/div[3]/div/div/p"));
-    selectableText.sendKeys("Thinking about Mac and Cheese");
-    Thread.sleep(1500);
-    driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[4]/div[2]/div[1]/span[2]/button")).click();
+        WebElement editStatus = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[4]/div[2]/div/span[2]/button"));
+        editStatus.click();
+        for(int i = 0;i < 30; i++){
+            robot.keyPress(KeyEvent.VK_BACK_SPACE);
+            robot.keyRelease(KeyEvent.VK_BACK_SPACE);
+            Thread.sleep(100);
+        }
+        WebElement selectableText = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[4]/div[2]/div[1]/div[3]/div/div/p"));
+        selectableText.sendKeys("Thinking about Mac and Cheese");
+        Thread.sleep(1500);
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[4]/div[2]/div[1]/span[2]/button")).click();
 
     }
     @Test(priority = 3)
     public void cannotBeBlank() throws InterruptedException{
-    WebElement editButton = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[2]/div[2]/div/span[2]/button"));
-    editButton.click();
-    for(int i = 0;i < 30;i++){
-        robot.keyPress(KeyEvent.VK_BACK_SPACE);
-        robot.keyRelease(KeyEvent.VK_BACK_SPACE);
-        Thread.sleep(100);}
+        WebElement editButton = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[2]/div[2]/div/span[2]/button"));
+        editButton.click();
+        for(int i = 0;i < 30;i++){
+            robot.keyPress(KeyEvent.VK_BACK_SPACE);
+            robot.keyRelease(KeyEvent.VK_BACK_SPACE);
+            Thread.sleep(100);}
         driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[2]/div[2]/div[1]/span[2]/button")).click();
         Thread.sleep(3000);
         robot.keyPress(KeyEvent.VK_ESCAPE);
@@ -99,40 +97,34 @@ public class ProfileTest
     }
     @Test(priority = 4)
     public void changeBack() throws InterruptedException{
-    Thread.sleep(3000);
-    WebElement addPic = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[1]/div/button"));
-    addPic.click();
-    WebElement removeImage = driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[5]/div/ul/div/div[4]/li"));
-    removeImage.click();
-    Thread.sleep(3000);
-    //confirm
-    driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div[2]/div/button[2]")).click();
-    Thread.sleep(3000);
-    WebElement selectableText = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[2]/div[2]/div[1]/div[3]/div/div/p"));
-    selectableText.sendKeys("Lentz Fortune ");
-    WebElement emojiButton = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[2]/div[2]/div[1]/span[1]/div[2]/button"));
-    emojiButton.click();
-    Thread.sleep(3000);
-    //click emoji
-    driver.findElement(By.xpath("//*[@id=\"8\"]")).click();
-    driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[2]/div[2]/div[1]/span[2]/button")).click();
-    Thread.sleep(3000);
-    WebElement selectableText2 = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[4]/div[2]/div[1]/div[3]/div/div/p"));
-    selectableText2.sendKeys("Battery about to die");
-    Thread.sleep(1500);
-    driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[4]/div[2]/div[1]/span[2]/button")).click();
-
-
-
-
+        Thread.sleep(3000);
+        WebElement addPic = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[1]/div/button"));
+        addPic.click();
+        WebElement removeImage = driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[5]/div/ul/div/div[4]/li"));
+        removeImage.click();
+        Thread.sleep(3000);
+        //confirm
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/span[2]/div/div/div/div/div/div/div[2]/div/button[2]")).click();
+        Thread.sleep(3000);
+        WebElement selectableText = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[2]/div[2]/div[1]/div[3]/div/div/p"));
+        selectableText.sendKeys("Lentz Fortune ");
+        WebElement emojiButton = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[2]/div[2]/div[1]/span[1]/div[2]/button"));
+        emojiButton.click();
+        Thread.sleep(3000);
+        //click emoji
+        driver.findElement(By.xpath("//*[@id=\"8\"]")).click();
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[2]/div[2]/div[1]/span[2]/button")).click();
+        Thread.sleep(3000);
+        WebElement selectableText2 = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[4]/div[2]/div[1]/div[3]/div/div/p"));
+        selectableText2.sendKeys("Battery about to die");
+        Thread.sleep(1500);
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[4]/div[2]/div[1]/span[2]/button")).click();
 
     }
-
-    @AfterMethod
-    public void tearDown() {
+    @AfterClass
+    public void tearDown(){
         driver.quit();
     }
-
 
 
 }

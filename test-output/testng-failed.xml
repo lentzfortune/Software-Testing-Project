@@ -5,19 +5,15 @@
     <classes>
       <class name="ContactTest">
         <methods>
+          <include name="blockUser"/>
           <include name="setUp"/>
           <include name="downloadMedia"/>
           <include name="tearDown"/>
+          <include name="starringMessages"/>
           <include name="mediaView"/>
+          <include name="addingContactToFavorite"/>
         </methods>
       </class> <!-- ContactTest -->
-      <class name="MessagingTest">
-        <methods>
-          <include name="testSendingMultipleMessages"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- MessagingTest -->
     </classes>
   </test> <!-- C:/Users/jorda/OneDrive - Florida Gulf Coast University/Projects/intellij/WhatsApp-Testing(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->
