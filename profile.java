@@ -123,10 +123,10 @@ public class profile
     Thread.sleep(1500);
     driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[1]/span/div/div/span/div/div/div[4]/div[2]/div[1]/span[2]/button")).click();
 
-
-
-
-
+    }
+    @AfterClass
+    public void tearDown(){
+        driver.quit();
     }
 
 
