@@ -42,7 +42,7 @@ public class MessagingTest {
         String[] messages = {"Hi there my friends. I will be showing off different fonts with + emojis", "_Here is some text with italics._", "*Here is some bolded text.*", "~And here is some text with a strikethrough.~"};
         WebElement body = driver.findElement(By.tagName("body"));
         Random r = new Random();
-        WebElement inputField = driver.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[2]/div/div/div/div[2]"));
+        WebElement inputField = driver.findElement(By.xpath("//*[@id=\"main\"]/footer/div[1]/div/span/div/div[2]/div[1]/div[2]/div[1]"));
         WebElement emojiField = driver.findElement(By.xpath("//*[@id=\"main\"]/footer/div[1]/div/span/div/div[2]/div[1]/div[1]/button"));
         for (int i = 0; i < messages.length; i++) {
             //Send messages from messages[]

@@ -3,7 +3,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -90,7 +89,7 @@ public class NotificationTest {
         action1.moveToElement(chat).perform();
         Thread.sleep(2000);
 
-        driver1.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[4]/div/div/div/div[2]/div[2]/div[2]/span[2]/button")).click();
+        driver1.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[4]/div/div/div/div[2]/div[2]/div[2]/span[2]/span/button")).click();
         Thread.sleep(2000);
 
         // Select mute notifications
@@ -214,7 +213,7 @@ public class NotificationTest {
         action1.moveToElement(chat).perform();
         Thread.sleep(2000);
 
-        driver1.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[2]/div/div/div/div[2]/div[2]/div[2]/span[3]/button")).click();
+        driver1.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[2]/div/div/div/div[2]/div[2]/div[2]/span[3]/span/button")).click();
         Thread.sleep(2000);
 
         // Select unmute
@@ -540,7 +539,7 @@ public class NotificationTest {
         action1.moveToElement(chat).perform();
         Thread.sleep(2000);
 
-        driver1.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[2]/div/div/div/div[2]/div[2]/div[2]/span[3]/button")).click();
+        driver1.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[2]/div/div/div/div[2]/div[2]/div[2]/span[3]/span/button")).click();
         Thread.sleep(2000);
 
         // Mark as unread

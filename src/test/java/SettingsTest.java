@@ -74,7 +74,7 @@ public class SettingsTest {
             js.executeScript("window.scrollBy(0, arguments[0]);", slowScrollIncrement);
             Thread.sleep(slowScrollSleepTime);
 
-            // Get current current position for necessary values
+            // Get current position for necessary values
             Long scrollTop = (Long) js.executeScript("return window.pageYOffset;");
             Long innerHeight = (Long) js.executeScript("return window.innerHeight;");
             Long scrollHeight = (Long) js.executeScript("return document.body.scrollHeight;");

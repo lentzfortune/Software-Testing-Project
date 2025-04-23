@@ -30,6 +30,7 @@ public class ContactTest {
 
     @Test(priority = 1) public void addingContactToFavorite() throws InterruptedException {
 
+        Thread.sleep(4000);
         driver.get("https://web.whatsapp.com/");
 
         // Opens Whatsapp
