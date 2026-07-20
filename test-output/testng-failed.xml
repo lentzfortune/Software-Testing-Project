@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="C:/Users/jorda/OneDrive - Florida Gulf Coast University/Projects/intellij/WhatsApp-Testing(failed)">
+    <classes>
+      <class name="ContactTest">
+        <methods>
+          <include name="blockUser"/>
+          <include name="setUp"/>
+          <include name="downloadMedia"/>
+          <include name="mediaView"/>
+          <include name="tearDown"/>
+          <include name="starringMessages"/>
+          <include name="addingContactToFavorite"/>
+        </methods>
+      </class> <!-- ContactTest -->
+      <class name="CommunityTest">
+        <methods>
+          <include name="addingAndKickingMembers"/>
+          <include name="sendingMessages"/>
+          <include name="editingCommunity"/>
+          <include name="tearDown"/>
+          <include name="deletingCommunity"/>
+          <include name="createCommunity"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- CommunityTest -->
+    </classes>
+  </test> <!-- C:/Users/jorda/OneDrive - Florida Gulf Coast University/Projects/intellij/WhatsApp-Testing(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->
